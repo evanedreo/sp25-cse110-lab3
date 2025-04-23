@@ -1,2 +1,2 @@
 # Lab 2 - Starter
-https://evanedreo.github.io/Lab2_Starter/
+GitHub Pages Site: https://evanedreo.github.io/sp25-cse110-lab3
