@@ -1,0 +1,247 @@
+/* === GENERAL STYLES === */
+
+/* CSS Variables with fallback */
+:root {
+  --main-bg: #f5f5f5;
+  --accent-color: hsl(210, 90%, 50%);
+}
+body {
+  background-color: var(--main-bg, white);
+  font-family: 'Roboto', sans-serif;
+  color: #333;
+  overflow-x: hidden;
+}
+* {
+  box-sizing: border-box;
+}
+
+/* === COLOR FORMATS === */
+h1 {
+  color: rgb(34, 139, 34);
+}
+h2 {
+  color: hsl(0, 80%, 50%);
+}
+p {
+  color: #555;
+}
+p:hover {
+  background-color: #f4f4f4;
+}
+a:hover {
+  color: red;
+}
+nav a:hover {
+  color: orange;
+}
+footer {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+section {
+  background-color: color(display-p3 0.9 0.9 0.8 / 0.4);
+}
+section.highlight-box {
+  background-color: #fffbe6;
+}
+#feedback {
+  background-color: #eef;
+  padding: 1rem;
+}
+form:has(input[type="radio"]) {
+  background-color: #f9f9ff;
+  padding: 10px;
+}
+section:has(audio) {
+  background-color: #f0f8ff;
+}
+.note-hint {
+  font-style: italic;
+  color: darkblue;
+}
+.hidden {
+  display: none;
+}
+
+/* === BOX MODEL === */
+section {
+  padding: 20px 15px 10px 5px;
+  width: 100%;
+  max-width: 100%;
+  overflow-wrap: break-word;
+}
+main > section {
+  width: 100%;
+  max-width: 100%;
+}
+footer {
+  padding-top: 10px;
+  padding-bottom: 20px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+h2 {
+  margin: 10px 20px;
+}
+ul {
+  margin-top: 10px;
+  margin-left: 15px;
+  margin-bottom: 5px;
+  margin-right: 15px;
+}
+main {
+  margin: auto;
+  width: 80%;
+}
+
+/* === BORDER === */
+img {
+  border-style: solid;
+  border-width: 3px;
+  border-color: #ccc;
+  border-radius: 8px;
+}
+.highlight-box {
+  border: 2px dashed crimson;
+  padding: 10px;
+}
+form > fieldset {
+  border: 2px solid #ccc;
+  background-color: #fcfcfc;
+}
+label + input {
+  border: 1px solid lightgray;
+}
+
+/* === TEXT === */
+h1, h2 {
+  text-align: center;
+  text-decoration: underline;
+}
+
+/* === DISPLAY === */
+img {
+  display: block;
+}
+footer span {
+  display: inline-block;
+}
+
+/* === UNITS === */
+html {
+  font-size: 1em;
+}
+h1 {
+  font-size: 2rem;
+}
+nav {
+  padding: 1em;
+}
+audio,
+video,
+img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+fieldset {
+  padding: 10px;
+}
+
+/* === FORM ELEMENTS === */
+form,
+fieldset,
+textarea,
+input,
+select {
+  width: 100%;
+  max-width: 100%;
+}
+form input[type="radio"],
+form input[type="checkbox"] {
+  width: auto;
+}
+
+/* === POSITION === */
+header {
+  position: sticky;
+  top: 0;
+}
+section#qa {
+  position: relative;
+}
+
+/* === FLEXBOX === */
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+nav li {
+  margin: 0 5px;
+}
+
+/* === LOGO RESPONSIVENESS === */
+.logo {
+  max-width: 100px;
+  height: auto;
+  display: block;
+}
+
+/* === GRID === */
+main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+/* === RESPONSIVENESS === */
+@media screen and (max-width: 768px) {
+  main {
+    display: block;
+    width: 100%;
+    padding: 1rem;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: center;
+  }
+
+  section,
+  main > section,
+  form,
+  fieldset,
+  img,
+  audio,
+  video {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+  }
+
+  .logo {
+    max-width: 80px;
+    margin: 0 auto 10px;
+  }
+}
+
+/* === PSEUDO-CLASSES === */
+button:active {
+  transform: scale(0.98);
+}
+
+/* === NESTED-LIKE SELECTORS === */
+form input,
+form textarea {
+  border: 1px solid #ddd;
+}
+section ul {
+  list-style-type: square;
+}
