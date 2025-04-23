@@ -5,13 +5,21 @@
   <meta name="description" content="Code the Change Project Leader Meeting Minutes">
   <title>Code the Change - Project Leader Meeting Minutes</title>
   <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <style>
+    summary {
+      color: purple;
+      cursor: pointer;
+    }
+  </style>  
+  <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
   <header>
-    <img src="codethechangelogo.png" alt="Code the Change Logo" width="120">
+    <img src="codethechangelogo.png" alt="Code the Change Logo" class="logo">
     <h1>Code the Change Project Leader Meeting Minutes</h1>
-    <h2>Date: Tuesday, 29 August 2023</h2>
+    <h2 style="color: teal;">Date: Tuesday, 29 August 2023</h2>
     <nav>
       <ul>
         <li><a href="#attendance">Attendance</a></li>
@@ -26,7 +34,7 @@
   </header>
 
   <main>
-    <section>
+    <section class="highlight-box">
       <h2>Call to Order</h2>
       <p>The meeting was called to order at <strong>8:03 PM</strong>.</p>
     </section>
@@ -167,6 +175,17 @@
           <button type="submit">Submit</button>
         </fieldset>
       </form>
+    </section>
+
+    <!-- Extra Section for Remaining CSS Requirements -->
+    <section>
+      <h2>Additional CSS Selector Demos</h2>
+
+      <label for="extra-note">Extra Note:</label>
+      <input type="text" id="extra-note" name="extra-note">
+      <span class="note-hint">Keep it short!</span>
+
+      <p class="hidden">This paragraph is hidden but styled!</p>
     </section>
   </main>
 
